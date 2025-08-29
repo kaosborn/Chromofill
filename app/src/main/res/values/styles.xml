@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="paletteStyle" format="reference" />
-
-    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="paletteStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
-    </style>
-
     <style name="SettingsDialog" parent="android:Theme.Dialog">
         <item name="android:windowNoTitle">true</item>
     </style>

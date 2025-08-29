@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,7 +7,6 @@
         <import type="android.view.View" />
         <variable name="pvm" type="kaosborn.chromafill.GridGamesViewModel" />
     </data>
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -114,14 +112,15 @@
             <Space
                 android:layout_width="wrap_content"
                 android:layout_height="16dp" />
-            <LinearLayout
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:orientation="horizontal"
                 android:id="@+id/palette"
-                android:layout_marginTop="16dp"
+                app:singleSelection="true"
+                app:selectionRequired="true"
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-            </LinearLayout>
+                android:layout_height="match_parent">
+            </com.google.android.material.button.MaterialButtonToggleGroup>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>

@@ -2,6 +2,6 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="cellTileSize">25dp</dimen>
     <dimen name="cellTileMargin">3dp</dimen>
-    <dimen name="paletteTileSize">48dp</dimen>
+    <dimen name="paletteTileSize">60dp</dimen>
     <dimen name="paletteTileMargin">12dp</dimen>
 </resources>

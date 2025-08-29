@@ -126,11 +126,8 @@ class GridGamesViewModel (private val state:SavedStateHandle) : ViewModel() {
 
         if (data.size>0) {
             grid = CellGrid (data, enums)
-            if (! grid.isConstant()) {
-                _isGameActive.value = true
-                _colorChoice.value = grid.at(xRoot,yRoot)
-            }
-
+            _isGameActive.value = if (grid.isConstant()) false else state.get<Boolean>(IS_ACTIVE_KEY) ?: true
+            _colorChoice.value = grid.at(xRoot,yRoot)
             _boardSize.value = state.get<Int>(BOARD_SIZE_KEY) ?: -1
             _score.value = state.get<Int>(SCORE_KEY) ?: -1
             _highScore.value = state.get<Int>(HIGH_SCORE_KEY) ?: 0
@@ -142,6 +139,7 @@ class GridGamesViewModel (private val state:SavedStateHandle) : ViewModel() {
 
     companion object {
         private const val COLORS_KEY = "COLORS"
+        private const val IS_ACTIVE_KEY = "IS_ACTIVE"
         private const val BOARD_SIZE_KEY = "BOARD_SIZE"
         private const val SCORE_KEY = "SCORE"
         private const val HIGH_SCORE_KEY = "HIGH_SCORE"
