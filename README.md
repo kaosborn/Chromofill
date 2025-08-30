@@ -1,11 +1,10 @@
-## Chromafill
+![logo](images/Chromafill.png)
+# Chromafill
 
-This project is a work in progress.
-The contents are an Android Studio project that is a collection of tile-based games.
-The suite of games consists of:
-* Chromafill - Flood fill until a solid color and win accolades!
+Chromafill is a tile-based Android game. To play, tap colors from the palette at the bottom to flood fill the board from top left until the board is painted a solid color.
 
-Chromafill is playable but is really meant as an exercise in Android application architecture and Kotlin programming.
+Although playable, this project is intended as an exercise in Android application programming using Views.
+Any future verion of Chromafill will be Compose based rather than View based.
 
-No `.apk` file is available at this time.
-To install, build it yourself in Android Studio Ladybug and launch.
+No `.apk` file is posted.
+To install Chromafill, build this project with Android Studio Narwhal and launch.
